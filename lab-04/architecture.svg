@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="t d">
+<title id="t">Хранение вложений TimeCapsule в Amazon S3</title><desc id="d">Браузер обращается к EC2 через Elastic IP; приложение проверяет права, получает временные данные IAM и отправляет операции с объектами в приватный S3. Скачивание идёт напрямую из S3 по подписанной ссылке.</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#385574"/></marker></defs>
+<rect width="960" height="480" fill="#f7fafb"/>
+<g font-family="Arial,sans-serif" fill="#12283d">
+<rect x="250" y="25" width="690" height="430" rx="16" fill="#eef4f9" stroke="#839ebb"/>
+<text x="270" y="56" font-weight="700" font-size="19">AWS Frankfurt · eu-central-1</text>
+<rect x="270" y="76" width="370" height="350" rx="12" fill="#e6eef8" stroke="#839ebb"/>
+<text x="290" y="105" font-size="16" font-weight="700">timecapsule-dev-vpc</text>
+<g fill="white" stroke="#9cb2c8"><rect x="30" y="142" width="150" height="70" rx="8"/><rect x="295" y="137" width="320" height="92" rx="8"/><rect x="295" y="276" width="320" height="54" rx="8"/><rect x="295" y="351" width="320" height="53" rx="8"/><rect x="682" y="143" width="228" height="110" rx="8"/></g>
+<text x="56" y="178" font-size="18">Браузер</text>
+<g font-size="15"><text x="310" y="162" font-weight="700">timecapsule-dev-app · public-a</text><text x="310" y="187">PHP · проверка доступа к капсуле</text><text x="310" y="210">Роль timecapsule-dev-app-role</text><text x="310" y="299" font-weight="700">timecapsule-dev-db · private-a</text><text x="310" y="318">PostgreSQL · метаданные</text><text x="310" y="382">timecapsule-dev-bastion · public-b</text><text x="699" y="168" font-weight="700">Amazon S3 · закрытый бакет</text><text x="699" y="192" font-size="12">timecapsule-dev-uploads-maximaxx44</text><text x="699" y="218">uploads/ · версии · HTTPS</text></g>
+<g fill="none" stroke="#385574" stroke-width="2" marker-end="url(#a)"><path d="M180 166H294"/><path d="M295 207H181"/><path d="M454 229V275"/><path d="M615 181H681"/><path d="M106 212V262H799V254"/></g>
+<g font-size="12" fill="#385574"><text x="187" y="155">Elastic IP</text><text x="190" y="223">HTTP 302</text><text x="467" y="254">TCP 5432</text><text x="624" y="132">PutObject / DeleteObject</text><text x="109" y="252">HTTPS · подписанный GET</text><text x="680" y="278">S3 вне VPC</text></g></g></svg>

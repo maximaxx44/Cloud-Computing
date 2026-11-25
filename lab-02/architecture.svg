@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="445" viewBox="0 0 900 445" role="img" aria-labelledby="title desc">
+<title id="title">TimeCapsule на Amazon EC2</title>
+<desc id="desc">Рабочий компьютер отправляет код на GitHub и запускает деплой по SSH. EC2 скачивает код по HTTPS. Браузер обращается к nginx, который вызывает PHP-FPM. PHP подключается к PostgreSQL и сохраняет файлы на EBS.</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#45607a"/></marker></defs>
+<rect width="900" height="445" fill="#f8fafc"/>
+<g font-family="Arial, sans-serif" fill="#132840">
+<rect x="20" y="147" width="860" height="274" rx="14" fill="#eaf2fa" stroke="#91aac3"/>
+<text x="39" y="174" font-size="17" font-weight="700">AWS · eu-central-1 · EC2 webserver · Amazon Linux 2023</text>
+<g fill="white" stroke="#91aac3" stroke-width="1.4">
+<rect x="43" y="44" width="145" height="48" rx="8"/><rect x="320" y="44" width="160" height="48" rx="8"/><rect x="700" y="44" width="154" height="48" rx="8"/>
+<rect x="46" y="205" width="140" height="56" rx="8"/><rect x="327" y="205" width="148" height="56" rx="8"/><rect x="702" y="205" width="152" height="56" rx="8"/>
+<rect x="483" y="340" width="167" height="52" rx="8"/><rect x="702" y="340" width="152" height="52" rx="8"/>
+</g>
+<g font-size="15" text-anchor="middle"><text x="115" y="73">Браузер</text><text x="400" y="73">Рабочий компьютер</text><text x="777" y="73">GitHub</text><text x="116" y="237">nginx</text><text x="401" y="229">PHP-FPM</text><text x="401" y="248">TimeCapsule</text><text x="778" y="237">Git / deploy.sh</text><text x="566" y="371">PostgreSQL 16</text><text x="778" y="371">EBS · storage</text></g>
+<g fill="none" stroke="#45607a" stroke-width="2" marker-end="url(#a)"><path d="M115 92V204"/><path d="M480 68H699"/><path d="M777 205V93"/><path d="M448 92V114H708V203"/><path d="M186 233H326"/><path d="M401 261V366H482"/><path d="M458 261V309H778V339"/></g>
+<g font-size="13" fill="#324e67"><text x="126" y="129">HTTP 80</text><text x="564" y="57">git push</text><text x="790" y="128">HTTPS</text><text x="593" y="106">SSH</text><text x="225" y="222">Unix-сокет</text><text x="417" y="354">PDO</text><text x="570" y="299">Вложения и сессии</text></g>
+</g></svg>
