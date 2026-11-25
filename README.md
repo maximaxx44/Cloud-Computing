@@ -1,6 +1,6 @@
 # Облачные вычисления
 
-[Лабораторная работа №1 — Модели сервисов в облаке](lab-01/LR1-Cloud-Service-Models-Maxim-Orlov.pdf)
+[Лабораторная работа №1 - Модели сервисов в облаке](lab-01/LR1-Cloud-Service-Models-Maxim-Orlov.pdf)
 
 [Лабораторная работа №2 - Веб-сервер на Amazon EC2](lab-02/README.md)
 

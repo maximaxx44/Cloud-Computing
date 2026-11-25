@@ -1,4 +1,4 @@
-// TimeCapsule — small browser script (the same file is used by every variant).
+// TimeCapsule - small browser script (the same file is used by every variant).
 // The app works without it; the script only makes dates nicer:
 //   1. a calendar with a time picker for the "Open at" field (flatpickr);
 //   2. the chosen local time is also sent as UTC, so the server knows the exact moment;

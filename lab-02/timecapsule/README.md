@@ -6,7 +6,7 @@ It uses PDO for PostgreSQL and plain PHP templates. The only PHP library is
 [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv), which reads the `.env` file; it is
 installed with [Composer](https://getcomposer.org). In the browser, the date and time picker is
 [flatpickr](https://flatpickr.js.org) (MIT license), vendored in `public/vendor/flatpickr`. The [root README](../README.md) explains
-what the app does. [`../open_capsules_php_oop`](../open_capsules_php_oop) is the same app written with classes.
+what the app does. [The object-oriented example](https://github.com/msu-cloud-course/app-samples/blob/0da0c0b7539ea128e3c20d00e3d81ec8d9bedb15/open_capsules_php_oop/README.md) is the same app written with classes.
 
 ```
 public/index.php                 front controller + route table (every request starts here)
@@ -48,7 +48,30 @@ made for classes, and this version of the app has none of its own.
   `pdo_pgsql`, `mbstring`, `fileinfo`, [Composer](https://getcomposer.org/download/) and a
   PostgreSQL database you can connect to.
 
-Windows: see [Setting up a Windows computer](../README.md#setting-up-a-windows-computer).
+Windows: see [Setting up a Windows computer](https://github.com/msu-cloud-course/app-samples/blob/0da0c0b7539ea128e3c20d00e3d81ec8d9bedb15/README.md#setting-up-a-windows-computer).
+
+## Обновление старого клона на EC2
+
+Если клон сделан до обновления истории `main`, обычный `git pull --ff-only` остановится. Перед следующим деплоем подключитесь к app-server по SSH и проверьте, что текущая ветка называется `main`, а в выводе `git status --short` нет локальных изменений.
+
+```bash
+cd /var/www/cloud-computing
+git branch --show-current
+git status --short
+```
+
+Если в выводе есть изменения, сначала сохраните их отдельно. Затем выполните команды по порядку. При ошибке остановитесь перед следующим шагом.
+
+```bash
+git fetch origin main
+git branch backup-before-main-rewrite HEAD
+git reset --keep origin/main
+git status --short
+cd lab-02/timecapsule
+./deploy.sh
+```
+
+Резервная ветка сохраняет старую версию кода. Команда `git reset --keep` прерывается, если обновление затронет локальные изменения в отслеживаемых файлах. Для обновления не удаляйте `.env`, каталоги данных и тома Docker.
 
 ## Run without Docker
 

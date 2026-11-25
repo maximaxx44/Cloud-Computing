@@ -1,5 +1,5 @@
 <?php
-// GET /wall — public page, no login needed.
+// GET /wall - public page, no login needed.
 function wall_index(): void
 {
     view('wall', [
